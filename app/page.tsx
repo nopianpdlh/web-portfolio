@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Squares from "@/app/components/background/Squares";
+import Lanyard from "@/app/components/ui/Lanyard";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <h1 className="  text-3xl font-bold text-purple-600">
         Tailwind ESM Berhasil!
       </h1>
+
       <h1 className="  text-3xl font-bold text-purple-600">
         Tailwind ESM Berhasil!
       </h1>
