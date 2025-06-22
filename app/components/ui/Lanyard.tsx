@@ -19,11 +19,10 @@ import {
 } from "@react-three/rapier";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
-import "@/app/global.d.ts";
 
 // replace with your own imports, see the usage snippet for details
-const cardGLB = "@publicassetslanyardcard.glb";
-const lanyard = "@/public/assets/lanyard/lanyard.png";
+const cardGLB = "/assets/lanyard/card.glb";
+const lanyard = "/assets/lanyard/lanyard.png";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 

@@ -1,7 +1,21 @@
-// import Lanyard from "@/app/components/ui/Lanyard";
+"use client"; // Pastikan ini ada di atas jika belum
+
+import dynamic from "next/dynamic";
 import RotatingText from "@/app/components/animations/RotatingText";
 import DecryptedText from "@/app/components/animations/DecryptedText";
 import { anosa, roles, bio } from "@/app/data/siteData";
+import { Suspense } from "react";
+
+// Gunakan dynamic import untuk memuat Lanyard hanya di client-side
+const Lanyard = dynamic(() => import("@/app/components/ui/Lanyard"), {
+  ssr: false, // Ini adalah kunci utamanya: nonaktifkan Server-Side Rendering
+  // Tampilkan UI sementara komponen 3D sedang dimuat
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center">
+      <p className="text-neutral-400">Memuat model 3D...</p>
+    </div>
+  ),
+});
 
 export default function HomeSection() {
   return (
@@ -25,7 +39,10 @@ export default function HomeSection() {
         </div>
       </div>
       <div className="relative flex-1 w-full h-96 lg:h-screen">
-        {/* <Lanyard /> */}
+        {/* Gunakan Suspense untuk fallback loading jika diperlukan */}
+        <Suspense fallback={<div className="w-full h-full bg-black" />}>
+          <Lanyard />
+        </Suspense>
       </div>
     </section>
   );

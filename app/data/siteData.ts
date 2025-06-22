@@ -1,7 +1,7 @@
 import { FaYoutube, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export const anosa = {
-  name: "anosa",
+  name: "NovianFadhilah",
   title: "Creative Developer",
   email: "nopian@example.com",
 };
@@ -32,21 +32,21 @@ export const projects = [
     title: "Proyek Alpha",
     description:
       "Sebuah platform e-commerce canggih yang dibangun dengan Next.js dan terintegrasi dengan Stripe untuk pembayaran.",
-    image: "/placeholder.jpg", // Ganti dengan path gambar Anda di folder public
+    image: "/assets/images/fotoku.jpg", // Ganti dengan path gambar Anda di folder public
     link: "#",
   },
   {
     title: "Proyek Beta",
     description:
       "Aplikasi visualisasi data interaktif menggunakan D3.js dan React untuk menganalisis tren pasar.",
-    image: "/placeholder.jpg",
+    image: "/assets/images/fotoku.jpg", // Ganti dengan path gambar Anda di folder public
     link: "#",
   },
   {
     title: "Proyek Gamma",
     description:
       "Situs portofolio pribadi dengan animasi 3D yang imersif, dibangun menggunakan Three.js dan React Three Fiber.",
-    image: "/placeholder.jpg",
+    image: "/assets/images/fotoku.jpg",
     link: "#",
   },
 ];
